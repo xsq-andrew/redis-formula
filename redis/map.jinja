@@ -4,7 +4,7 @@
         'svc_name': 'redis-server',
         'cfg_name': '/etc/redis/redis.conf',
         'cfg_version': salt['grains.filter_by']({
-	  'wheezy': '2.4',
+	  'wheezy': '2.8',
 	  'jessie': '2.8',
 	  'default': '2.8'
 	}, grain='oscodename'),
