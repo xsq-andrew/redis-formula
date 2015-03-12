@@ -5,7 +5,7 @@ include:
 {% from "redis/map.jinja" import redis with context %}
 
 
-{% set install_from   = redis.install_from|default('package') -%}
+{% set install_from   = redis.install_from|default('source') -%}
 {% set svc_state      = salt['pillar.get']('redis:svc_state', 'running') -%}
 {% set svc_onboot     = salt['pillar.get']('redis:svc_onboot', True) -%}
 
