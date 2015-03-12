@@ -1,12 +1,12 @@
 {% from "redis/map.jinja" import redis with context %}
 
 
-{% set install_from   = redis.install_from|default('package') -%}
+{% set install_from   = redis.install_from|default('source') -%}
 
 
 {% if install_from == 'source' %}
-{% set version = redis.version|default('2.8.8') -%}
-{% set checksum = redis.checksum|default('sha1=aa811f399db58c92c8ec5e48271d307e9ab8eb81') -%}
+{% set version = redis.version|default('2.8.19') -%}
+{% set checksum = redis.checksum|default('sha1=3e362f4770ac2fdbdce58a5aa951c1967e0facc8') -%}
 {% set root = redis.root|default('/usr/local') -%}
 
 {# there is a missing config template for version 2.8.8 #}
